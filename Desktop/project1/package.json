@@ -30,6 +30,7 @@
     "@nestjs/swagger": "^6.3.0",
     "addmyproject": "file:../addmyproject",
     "axios": "^1.4.0",
+    "build": "^0.1.4",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
     "mongoose": "^7.2.0",
