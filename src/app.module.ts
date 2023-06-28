@@ -1,7 +1,7 @@
 import { Module, forwardRef } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Authmodule } from './auth/auth.module';
-import { Usercontroller } from './user.controller';
+import { Hologramcontroller } from './hologram.controller';
 import { user, userschema } from './user.schema';
 import { UsersService } from './user.service';
 import { DeviceService } from './device/device.service';
@@ -21,7 +21,7 @@ import { DeviceController } from '../src/device/device.controller';
     MongooseModule.forRoot('mongodb://localhost:27017/mynestjs'),
     MongooseModule.forFeature([{ name: user.name, schema: userschema }]),
   ],
-  controllers: [Usercontroller, MockServerController],
+  controllers: [Hologramcontroller, MockServerController],
   providers: [
     UsersService,
     Authmodule,
