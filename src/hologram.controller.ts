@@ -5,7 +5,7 @@ import { user } from './user.schema';
 //import { userdto } from './user.dto';
 //import { userint } from './user.interface';
 import { response } from 'express';
-//import { AuthGuard } from '@nestjs/passport';
+import { AuthGuard } from '@nestjs/passport';
 import { Authmodule } from './auth/auth.module';
 //import { ApiTags } from '@nestjs/swagger';
 import { ApiTags, ApiResponse, ApiOperation ,ApiParam,ApiQuery} from '@nestjs/swagger';
