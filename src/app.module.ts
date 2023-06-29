@@ -12,7 +12,9 @@ import { HttpModule } from '@nestjs/axios';
 //import { MyModule } from 'addmyproject/src/mymodule';
 import {MyService } from 'addmyproject/dist/myservice'
 import { DeviceController } from '../src/device/device.controller';
+import { simcontroller } from './simcontroller';
 //import { DeviceController } from './device/device.controller';
+import {SimService} from 'addmyproject/dist/SimService'
 
 @Module({
   imports: [
@@ -21,13 +23,13 @@ import { DeviceController } from '../src/device/device.controller';
     MongooseModule.forRoot('mongodb://localhost:27017/mynestjs'),
     MongooseModule.forFeature([{ name: user.name, schema: userschema }]),
   ],
-  controllers: [Hologramcontroller, MockServerController],
+  controllers: [Hologramcontroller, MockServerController ,simcontroller],
   providers: [
     UsersService,
     Authmodule,
     DeviceService,
     NetworkService,
-    AxiosProvider,MyService
+    AxiosProvider,MyService,SimService
   ],
   exports: [NetworkService],
 })
